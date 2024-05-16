@@ -24,7 +24,8 @@ func main() {
 	fmt.Println("enter address:")
 	fmt.Scanf("%s", &address)
 	// 将姓名和地址添加到映射中
-	MAP[name] = address
+	MAP["name"] = name
+	MAP["address"] = address
 	// 使用 Marshal() 从地图中创建一个 JSON 对象
 	data, _ := json.Marshal(MAP)
 
