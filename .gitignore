@@ -26,3 +26,5 @@ go.work
 .vscode/
 
 Getting-Started-with-Go/week1/*.png
+
+*.txt
