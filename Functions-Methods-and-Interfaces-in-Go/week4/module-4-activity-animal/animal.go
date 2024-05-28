@@ -85,18 +85,23 @@ func main() {
 				animals[name] = Bird{name}
 			case "snake":
 				animals[name] = Snake{name}
+			default:
+				fmt.Println("unknown animal type")
 			}
 			fmt.Println("Created it!")
 		case "query":
 			animal := animals[name]
-			switch actionOrType {
-			case "eat":
-				animal.Eat()
-			case "move":
-				animal.Move()
-			case "speak":
-				animal.Speak()
+			if animal != nil {
+				switch actionOrType {
+				case "eat":
+					animal.Eat()
+				case "move":
+					animal.Move()
+				case "speak":
+					animal.Speak()
+				}
 			}
+			fmt.Println("unknown name")
 		}
 	}
 }
